@@ -5,6 +5,9 @@ Relative, alphanumertic line jumping.
 A simple package to allow the user to jump relative lines using an
 alphanumeric relative line numbering.
 
+![Screenshot](https://raw.githubusercontent.com/millerjs/relative-jump.el/master/screenshot/screenshot1.png)
+
+
 ### Why?
 
 I never really got into `ace-jump`, a fault of my own. I found that I
