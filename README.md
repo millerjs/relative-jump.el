@@ -1,6 +1,6 @@
 # relative-jump.el
 
-Relative, alphanumertic line jumping.
+Relative, alphanumeric line jumping.
 
 A simple package to allow the user to jump relative lines using an
 alphanumeric relative line numbering.
@@ -24,13 +24,13 @@ region or thinking about what you're going to do when you get there.
 Put `relative-jump.el` in your `load-path`. My config looks something
 like this:
 
-```
+```elisp
 (require 'relative-jump)
 
 ;; Bind Control-Alt-n to a forward jump
 (global-set-key (kbd "C-M-n") 'relative-jump-forward)
 
-;; Bind Control-Alt-n to a backward jump
+;; Bind Control-Alt-p to a backward jump
 (global-set-key (kbd "C-M-p") 'relative-jump-backward)
 
 ;; Set the linum format
@@ -42,7 +42,7 @@ like this:
 With the above setup, the keystrokes `C-M-n c RET` will jump forward
 to line `c` containing `((symbolp x) (symbol-value x)))`.
 
-```
+```elisp
 d ›
 c ›
 b › (cond ((numberp x) x)
@@ -56,7 +56,7 @@ d ›
 
 For longer buffers, the letters are appended with a number multiplier.
 
-```
+```elisp
 d › (cond ((numberp x) x)
 c ›       ((stringp x) x)
 b ›       ((bufferp x)
@@ -72,16 +72,7 @@ a3›
 b3›
 ```
 
-You simply enter `a3`, `c2`, etc. to jump to line specified!
-
-The jump distance is calculated by `26*(N - 1) + A` where `N` is the
-numeric multiplier and `A` is the distance of the alphabetic character
-from the beginning of the alphabet plus one.
-
-* The keystrokes `C-M-n b1 RET` will jump forward `26*(1-1) + 2 = 2` lines.
-* The keystrokes `C-M-n a2 RET` will jump forward `26*(2-1) + 1 = 27` lines.
-* The keystrokes `C-M-n b2 RET` will jump forward `26*(2-1) + 2 = 28` lines.
-* The keystrokes `C-M-n c4 RET` will jump forward `26*(4-1) + 3 = 81` lines.
+You simply enter `a3`, `c2`, `b3`, etc. to jump to line specified!
 
 ### TODO
 
