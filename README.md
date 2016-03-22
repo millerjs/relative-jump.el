@@ -36,7 +36,7 @@ like this:
 
 ### Example
 
-With the above setup, the keystrokes `C-M-p c RET` will jump forward
+With the above setup, the keystrokes `C-M-n c RET` will jump forward
 to line `c` containing `((symbolp x) (symbol-value x)))`.
 
 ```
@@ -61,12 +61,12 @@ a ›        (setq temporary-hack x) ; multiple body-forms
   ›        (buffer-name x))        ; in one clause
 a ›       ((symbolp x) (symbol-value x)))
 ...
-a2 ›
-b2 ›
-c2 ›
-...
-a3 ›
-b3 ›
+a2›
+b2›
+c2›
+..
+a3›
+b3›
 ```
 
 You simply enter `a3`, `c2`, etc. to jump to line specified!
@@ -75,10 +75,10 @@ The jump distance is calculated by `26*(N - 1) + A` where `N` is the
 numeric multiplier and `A` is the distance of the alphabetic character
 from the beginning of the alphabet plus one.
 
-* The keystrokes `C-M-p b1 RET` will jump forward `26*(1-1) + 2 = 2` lines.
-* The keystrokes `C-M-p a2 RET` will jump forward `26*(2-1) + 1 = 27` lines.
-* The keystrokes `C-M-p b2 RET` will jump forward `26*(2-1) + 2 = 28` lines.
-* The keystrokes `C-M-p c4 RET` will jump forward `26*(4-1) + 3 = 81` lines.
+* The keystrokes `C-M-n b1 RET` will jump forward `26*(1-1) + 2 = 2` lines.
+* The keystrokes `C-M-n a2 RET` will jump forward `26*(2-1) + 1 = 27` lines.
+* The keystrokes `C-M-n b2 RET` will jump forward `26*(2-1) + 2 = 28` lines.
+* The keystrokes `C-M-n c4 RET` will jump forward `26*(4-1) + 3 = 81` lines.
 
 ### TODO
 
