@@ -78,7 +78,7 @@
 (defun linum-relative-alpha-numeric (line-number)
   "Create alpha-numeric line numbering for ergonomic jumping"
   (let* ((diff1 (abs (- line-number linum-relative-last-pos)))
-         (diff (if (minusp diff1)
+         (diff (if (cl-minusp diff1)
                    diff1
                  (+ diff1 linum-relative-plusp-offset)))
          (current-p (= diff linum-relative-plusp-offset))
